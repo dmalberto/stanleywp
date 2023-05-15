@@ -1,5 +1,3 @@
-<?php
-?>
 <?php get_header(); ?>
 <div class="mx-auto" style="height: 60vh; display: flex; align-items: center; justify-content: center;">
 	<div class="page-wrap d-flex flex-row align-items-center">
@@ -12,14 +10,9 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-
 </div>
-	<div>
-				<?php
-echo do_shortcode('[smartslider3 slider="3"]');
-?>
-	</div>
-
+<div>
+	<?php echo do_shortcode('[smartslider3 slider="3"]'); ?>
+</div>
 <?php get_footer(); ?>

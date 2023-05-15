@@ -1,11 +1,9 @@
 jQuery( function( $ )
 {
 	var template = $( '#tmpl-rwmb-file-advanced' ).html();
-
 	$( 'body' ).on( 'click', '.rwmb-file-advanced-upload', function( e )
 	{
 		e.preventDefault();
-
 		var $uploadButton = $( this ),
 			$fileList = $uploadButton.siblings( '.rwmb-uploaded' ),
 			maxFileUploads = $fileList.data( 'max_file_uploads' ),
@@ -17,9 +15,7 @@ jQuery( function( $ )
 				multiple: true,
 				title: rwmbFileAdvanced.frameTitle
 			};
-
 		msg = msg.replace( '%d', maxFileUploads );
-
 		// Create a media frame
 		if ( mimeType )
 		{
@@ -28,13 +24,10 @@ jQuery( function( $ )
 			};
 		}
 		frame = wp.media( frameOptions );
-
 		// Open media uploader
 		frame.open();
-
 		// Remove all attached 'select' event
 		frame.off( 'select' );
-
 		// Handle selection
 		frame.on( 'select', function()
 		{
@@ -42,14 +35,12 @@ jQuery( function( $ )
 			var selection = frame.state().get( 'selection' ).toJSON(),
 				uploaded = $fileList.children().length,
 				ids;
-
 			if ( maxFileUploads > 0 && ( uploaded + selection.length ) > maxFileUploads )
 			{
 				if ( uploaded < maxFileUploads )
 					selection = selection.slice( 0, maxFileUploads - uploaded );
 				alert( msg );
 			}
-
 			// Get only files that haven't been added to the list
 			// Also prevent duplication when send ajax request
 			selection = _.filter( selection, function( attachment )
@@ -57,7 +48,6 @@ jQuery( function( $ )
 				return $fileList.children( 'li#item_' + attachment.id ).length == 0;
 			} );
 			ids = _.pluck( selection, 'id' );
-
 			if ( ids.length > 0 )
 			{
 				// Attach attachment to field and get HTML

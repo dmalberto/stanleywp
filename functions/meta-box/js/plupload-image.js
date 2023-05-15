@@ -5,11 +5,9 @@ jQuery( function( $ )
 	{
 		// Check if we need to show drop target
 		var $dragndrop = $( this ).parents( '.rwmb-images' ).siblings( '.rwmb-drag-drop' );
-
 		// After delete files, show the Drag & Drop section
 		$dragndrop.removeClass('hidden');
 	} );
-
 	$( '.rwmb-drag-drop' ).each(function()
 	{
 		// Declare vars
@@ -17,7 +15,6 @@ jQuery( function( $ )
 			$imageList = $dropArea.siblings( '.rwmb-uploaded' ),
 			uploaderData = $dropArea.data( 'js_options' ),
 			uploader = {};
-
 		// Extend uploaderData
 		uploaderData.multipart_params = $.extend(
 			{
@@ -26,20 +23,16 @@ jQuery( function( $ )
 			},
 			uploaderData.multipart_params
 		);
-
 		// Create uploader
 		uploader = new plupload.Uploader( uploaderData );
 		uploader.init();
-
 		// Add files
 		uploader.bind( 'FilesAdded', function( up, files )
 		{
 			var maxFileUploads = $imageList.data( 'max_file_uploads' ),
 				uploaded = $imageList.children().length,
 				msg = maxFileUploads > 1 ? rwmbFile.maxFileUploadsPlural : rwmbFile.maxFileUploadsSingle;
-
 			msg = msg.replace( '%d', maxFileUploads );
-
 			// Remove files from queue if exceed max file uploads
 			if ( maxFileUploads > 0  && ( uploaded + files.length ) > maxFileUploads )
 			{
@@ -51,13 +44,10 @@ jQuery( function( $ )
 				}
 				alert( msg );
 			}
-
 			// Hide drag & drop section if reach max file uploads
 			if ( maxFileUploads > 0 && uploaded + files.length >= maxFileUploads )
 				$dropArea.addClass( 'hidden' );
-
 			max = parseInt( up.settings.max_file_size, 10 );
-
 			// Upload files
 			plupload.each( files, function( file )
 			{
@@ -68,27 +58,22 @@ jQuery( function( $ )
 			} );
 			up.refresh();
 			up.start();
-
 		} );
-
 		uploader.bind( 'Error', function( up, e )
 		{
 			addLoading( up, e.file, $imageList );
 			removeError( e.file );
 			up.removeFile( e.file );
 		} );
-
 		uploader.bind( 'FileUploaded', function( up, file, r )
 		{
 			r = $.parseJSON( r.response );
 			r.success ? $( 'li#' + file.id ).replaceWith( r.data ) : removeError( file );
 		} );
 	});
-
 	/**
 	 * Helper functions
 	 */
-
 	/**
 	 * Removes li element if there is an error with the file
 	 *
@@ -105,7 +90,6 @@ jQuery( function( $ )
 			}
 		);
 	}
-
 	/**
 	 * Adds loading li element
 	 *
@@ -115,7 +99,6 @@ jQuery( function( $ )
 	{
 		$ul.removeClass('hidden').append( "<li id='" + file.id + "'><div class='rwmb-image-uploading-bar'></div><div id='" + file.id + "-throbber' class='rwmb-image-uploading-status'></div></li>" );
 	}
-
 	/**
 	 * Adds loading throbber while waiting for a response
 	 *

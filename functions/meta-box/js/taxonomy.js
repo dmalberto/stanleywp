@@ -14,7 +14,6 @@ jQuery( document ).ready( function( $ )
 			$childList.addClass( 'hidden' );
 		}
 	} );
-
 	$( '.rw-taxonomy-tree select' ).change( function()
 	{
 		var $this = $( this ),

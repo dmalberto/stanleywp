@@ -7,7 +7,6 @@
  *
  * http://docs.jquery.com/UI/Theming/API
  */
-
 /* Layout helpers
 ----------------------------------*/
 .ui-helper-hidden { display: none; }
@@ -20,27 +19,17 @@
 .ui-helper-clearfix { display:block; }
 /* end clearfix */
 .ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
-
-
 /* Interaction Cues
 ----------------------------------*/
 .ui-state-disabled { cursor: default !important; }
-
-
 /* Icons
 ----------------------------------*/
-
 /* states and images */
 .ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
-
-
 /* Misc visuals
 ----------------------------------*/
-
 /* Overlays */
 .ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-
 /*
  * jQuery UI Slider 1.8.14
  *
@@ -55,7 +44,6 @@
 .ui-slider .ui-slider-handle.ui-corner-all { border:0 !important;}
 .ui-slider .ui-slider-handle.ui-state-focus { border:0 !important; background: url(../images/slider-control.png) no-repeat center center !important;outline: none;}
 .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
-
 .ui-slider-horizontal { height: 7px; border-color: #aaa; 
 border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;
 box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.20), 0px 0px 1px rgba(0, 0, 0, 0.20);
@@ -70,7 +58,6 @@ box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.20), 0px 0px 1px rgba(0, 0, 0, 0.2
 -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.20), 0px 0px 1px rgba(0, 0, 0, 0.20);
 -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.20), 0px 0px 1px rgba(0, 0, 0, 0.20);}
 .ui-slider-range.ui-widget-header{border: 1px solid #094B97; margin-top: -1px; margin-left: -1px; background: #0F7FFF;border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;}
-
 .ui-slider-vertical { width: .8em; height: 100px; }
 .ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
 .ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }

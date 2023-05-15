@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
 .rwmb-file li{
 	width: 250px;	
 	margin:0 10px 10px 0;;	
@@ -37,7 +36,6 @@
 .rwmb-file .rwmb-icon, .rwmb-file .rwmb-info {
 	margin:0 0 2px 2px;
 }
-
 .rwmb-file li.removed {
 	width: 0;
 	margin: 0;
@@ -46,7 +44,6 @@
 	-moz-opacity: 0;
 	-o-opacity: 0;	
 }
-
 .rwmb-file li.removed:after {
 	content: ' ';
 	position: absolute;

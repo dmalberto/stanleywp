@@ -3,20 +3,15 @@
  */
 // Placeholder
 jQuery(function(){
-
       //Shortcode Popover
      jQuery("a[rel=popover]").popover()
       .click(function(e) {
         e.preventDefault()
       });
-
       //Shortcode Tooltip
       jQuery("a[rel=tooltip]").tooltip();
-
       //Data Tooltip
       jQuery("[data-toggle='tooltip']").tooltip();
-
-
        jQuery('.blue').hoverZoom({
                 overlayColor: '#3498db',
                 zoom: 0
@@ -42,5 +37,4 @@ jQuery(function(){
                 zoom: 0
             });
   
-
 });

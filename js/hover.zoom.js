@@ -1,7 +1,5 @@
 (function($){
-
     $.fn.extend({ 
-
         hoverZoom: function(settings) {
  
             var defaults = {
@@ -19,7 +17,6 @@
                 var s = settings;
                 var hz = $(this);
                 var image = $('img', hz);
-
                 image.load(function() {
                     
                     if(s.overlay === true) {

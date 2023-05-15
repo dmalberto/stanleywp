@@ -1,13 +1,11 @@
 ( function( $ )
 {
 	'use strict';
-
 	// Use function construction to store map & DOM elements separately for each instance
 	var mapField = function( $container )
 	{
 		this.$container = $container;
 	};
-
 	// Use prototype for better performance
 	mapField.prototype = {
 		// Initialize everything
@@ -15,12 +13,10 @@
 		{
 			this.initDomElements();
 			this.initMapElements();
-
 			this.initMarkerPosition();
 			this.addListeners();
 			this.autocomplete();
 		},
-
 		// Initialize DOM elements
 		initDomElements: function()
 		{
@@ -29,21 +25,17 @@
 			this.$findButton = this.$container.find( '.rwmb-map-goto-address-button' );
 			this.addressField = this.$findButton.val();
 		},
-
 		// Initialize map elements
 		initMapElements: function()
 		{
 			var defaultLoc = $(this.canvas).data('default-loc'),
 				latLng;
-
 			if (defaultLoc) {
 				defaultLoc = defaultLoc.split(',');
 			} else {
 				defaultLoc = [53.346881, -6.258860];
 			}
-
 			latLng = new google.maps.LatLng( defaultLoc[0], defaultLoc[1] ); // Initial position for map
-
 	 		this.map = new google.maps.Map( this.canvas, {
 				center: latLng,
 				zoom: 14,
@@ -53,21 +45,17 @@
 			this.marker = new google.maps.Marker( {position: latLng, map: this.map, draggable: true} );
 			this.geocoder = new google.maps.Geocoder();
 		},
-
 		// Initialize marker position
 		initMarkerPosition: function()
 		{
 			var coord = this.$coordinate.val(),
 				l,
 				zoom;
-
 			if ( coord )
 			{
 				l = coord.split( ',' );
 				this.marker.setPosition( new google.maps.LatLng( l[0], l[1] ) );
-
 				zoom = l.length > 2 ? parseInt( l[2], 10 ) : 14;
-
 				this.map.setCenter( this.marker.position );
 				this.map.setZoom( zoom );
 			}
@@ -76,7 +64,6 @@
 				this.geocodeAddress();
 			}
 		},
-
 		// Add event listeners for 'click' & 'drag'
 		addListeners: function()
 		{
@@ -90,23 +77,19 @@
 			{
 				that.updateCoordinate( event.latLng );
 			} );
-
 			this.$findButton.on( 'click', function()
 			{
 				that.geocodeAddress();
 				return false;
 			} );
 		},
-
 		// Autocomplete address
 		autocomplete: function()
 		{
 			var that = this;
-
 			// No address field or more than 1 address fields, ignore
 			if ( !this.addressField || this.addressField.split( ',' ).length > 1 )
 				return;
-
 			$( '#' + this.addressField ).autocomplete( {
 				source: function( request, response )
 				{
@@ -129,20 +112,17 @@
 				select: function( event, ui )
 				{
 					var latLng = new google.maps.LatLng( ui.item.latitude, ui.item.longitude );
-
 					that.map.setCenter( latLng );
 					that.marker.setPosition( latLng );
 					that.updateCoordinate( latLng );
 				}
 			} );
 		},
-
 		// Update coordinate to input field
 		updateCoordinate: function( latLng )
 		{
 			this.$coordinate.val( latLng.lat() + ',' + latLng.lng() );
 		},
-
 		// Find coordinates by address
 		// Find coordinates by address
 		geocodeAddress: function()
@@ -152,12 +132,10 @@
 				fieldList = this.addressField.split( ',' ),
 				loop,
 				that = this;
-
 			for ( loop = 0; loop < fieldList.length; loop++ )
 			 addressList[loop]=jQuery( '#' + fieldList[loop] ).val();
 			 
 			address = addressList.join(",").replace( /\n/g, ',' ).replace( /,,/g, ',' );
-
 			if (address)
 			{
 				this.geocoder.geocode( {'address': address}, function( results, status )
@@ -172,16 +150,13 @@
 			}
 		},
 	};
-
 	$( function()
 	{
 		$( '.rwmb-map-field' ).each( function()
 		{
 			var field = new mapField( $( this ) );
 			field.init();
-
 			$( this ).data('mapController', field);
 		} );
 	} );
-
 } )( jQuery );

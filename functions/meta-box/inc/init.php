@@ -1,6 +1,5 @@
 <?php
-add_action( 'admin_init', 'rwmb_register_meta_boxes' );
-
+add_action("admin_init", "rwmb_register_meta_boxes");
 /**
  * Register meta boxes via a filter
  * Advantages:
@@ -13,9 +12,8 @@ add_action( 'admin_init', 'rwmb_register_meta_boxes' );
  */
 function rwmb_register_meta_boxes()
 {
-	$meta_boxes = apply_filters( 'rwmb_meta_boxes', array() );
-	foreach ( $meta_boxes as $meta_box )
-	{
-		new RW_Meta_Box( $meta_box );
-	}
+    $meta_boxes = apply_filters("rwmb_meta_boxes", []);
+    foreach ($meta_boxes as $meta_box) {
+        new RW_Meta_Box($meta_box);
+    }
 }

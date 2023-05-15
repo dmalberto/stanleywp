@@ -8,7 +8,6 @@
 	color: #999;
 	text-align: center;
 }
-
 .updated, .error {
 	display:none!important
 } /* disable the admin notices */
@@ -49,7 +48,6 @@
 .js #of_container #js-warning {
  display: none;
  }
-
 #of_container #header .logo h2 {
 	display:inline-block;
 	font-style:normal;
@@ -65,7 +63,6 @@
 	background: url(../images/icon_option.png) no-repeat;
 	margin:20px 30px 0;
 }
-
 #of_container #info_bar {
 	background: #f3f3f3;
 	border:solid #d8d8d8;
@@ -78,7 +75,6 @@
 	-webkit-box-shadow: inset 0 1px 0 #fcfcfc;
 	box-shadow: inset 0 1px 0 #fcfcfc;
 }
-
 #of_container #expand_options{
 cursor: pointer;
 display: block;
@@ -122,17 +118,14 @@ border-radius: 2px;
 	margin-right: 1px;
 	border-bottom: 1px solid #d8d8d8;
 }
-
 #of_container #of-nav li:last-child {
 	-moz-box-shadow: inset 0 1px 0 #f9f9f9, 0 1px 0 #f9f9f9;
 	-webkit-box-shadow: inset 0 1px 0 #f9f9f9, 0 1px 0 #f9f9f9;
 	box-shadow: inset 0 1px 0 #f9f9f9, 0 1px 0 #f9f9f9;
 }
-
 #of_container #of-nav li.current {
 	margin-right: 0;
 }
-
 #of_container #of-nav li a, #of_container #of-nav ul li a:link, #of-nav ul li a:visited {
 	display: block;
 	padding: 10px 10px 10px 40px;
@@ -149,12 +142,10 @@ border-radius: 2px;
 	color: #797979;
 	opacity: 1;
 }
-
 #of_container #of-nav ul li a:hover {
 	color: #d54e21;
 	opacity: 1;
 }
-
 /*menu icons - customize to your liking*/
 #of_container #of-nav li.slideroptions a{ background-image:url(../images/icon-slider.png);}
 #of_container #of-nav li.generalsettings a{ background-image:url(../images/icon-settings.png);}
@@ -165,7 +156,6 @@ border-radius: 2px;
 #of_container #of-nav li.advancedsettings a {background: url(../images/wrench16.png) no-repeat;}
 #of_container #of-nav li.posttypes a { background-image: url(../images/icon-posttypes.png);
 }
-
 #of_container #content {
 	float: left;
 	min-height: 500px;
@@ -204,10 +194,8 @@ border-radius: 2px;
 #of_container #content .section-checkbox .controls {
 	width:25px
 }
-
 #of_container #content .section-multicheck .controls input.checkbox {
 }
-
 #of_container #content .section-checkbox .explain {
 	max-width:93%;
 }
@@ -227,7 +215,6 @@ border-radius: 2px;
 	border: 1px solid #D6F0FF;
 	color:#777;
 }
-
 #of_container #content .section-info .controls .of-info ._icon { 
 	height:16px; width:16px;
 	margin: 0 10px 0 0;
@@ -286,8 +273,6 @@ border-radius: 2px;
 	box-shadow: inset 0 1px 0 #fff;
 	text-align:center;
 }
-
-
 #of_container #content .section-sorter li.placeholder {
 	background:#f9f9f9;
 	border-width:1px;
@@ -299,8 +284,6 @@ border-radius: 2px;
 	border-width:1px;
 	border-style:dashed;
 	height:33px;}
-
-
 #of_container textarea, #of_container input, #of_container select, #of_container button{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -321,18 +304,14 @@ border-radius: 2px;
 #of_container .controls input:hover, #of_container .controls textarea:hover {
 	background-color: #f9f9f9;
 }
-
 #of_container .controls input:focus, #of_container .controls textarea:focus { 
 	background-color: #fff;
 	border-color: #ccc #e6e6e6 #e6e6e6 #ccc;
 	outline:0;
 }
-
 #of_container .controls .upload {
 	width: 340px;
 }
-
-
 #of_container .controls select {
 	height: 28px;
 	padding: 4px 5px;
@@ -395,7 +374,6 @@ label.radio, label.multicheck {
 #of_container .controls .of-radio-img-img:hover {
 	opacity:.8;
 }
-
 #of_container .controls .of-radio-tile-img {
 	width:50px;
 	height:50px;
@@ -411,7 +389,6 @@ label.radio, label.multicheck {
 #of_container .controls .of-radio-tile-img:hover {
 	opacity:.8;
 }
-
 #of_container .controls .of-border-width {
 	width:70px;
 	float:left
@@ -431,7 +408,6 @@ label.radio, label.multicheck {
 #of_container .controls input:focus, #of_container select:focus, #of_container textarea:focus {
 	background:#fff;
 }
-
 #of_container .accept {
 	background: #DBF6BE no-repeat 10px center;
 	border: solid #9BBF65;
@@ -471,7 +447,6 @@ label.radio, label.multicheck {
 	-moz-border-radius: 12px;
 	border-radius: 12px;
 }
-
 #of_container .of-save-popup div{
 	background-repeat: no-repeat;
 	background-position: 20px 50%;
@@ -486,19 +461,16 @@ label.radio, label.multicheck {
 #of_container .of-save-fail {
 	background-image:url(../images/stop.png);
 }
-
 #of_container .accept,
 #of_container .warning,
 #of_container .update_available,
 #of_container .of-save-popup {
 	z-index: 9999;
 }
-
 #of_container .upload_button_div {
 	margin-top:7px;
 	margin-bottom: 15px;
 }
-
 #of_container .button {
 border-width: 1px;
 border-style: solid;
@@ -510,26 +482,20 @@ border-color: #dfdfdf;
 background-color: #fff;
 margin:4px 0 4px;
 }
-
-
 #of_container .button:hover,#of_container .button_hover {
 border-color: #bbb;
 color: #464646;
 }
-
 #of_container .button_active {
     background:#eee url(../../images/white-grad-active.png) repeat-x scroll left top;
 }
-
 #of_container .image_reset_button, #of_container .button.remove-image {
 	margin-left:10px;
 	color:#ef521d;
 }
-
 #of_container .image_reset_button:hover, #of_container .button.remove-image:hover {
 	color:red;
 }
-
 #of_container .upload-error {
 	float:left;
 	color:#666;
@@ -551,12 +517,8 @@ color: #464646;
 	color: #ef521d;
 	border-color: #bbb;
 }
-
 #of_container .reset-button:hover { color: #ef521d; border-color: #888}
-
 #of_container .slide_add_button { float:right; margin-top:10px; }
-
-
 #of_container .save_bar {
 	background: #f3f3f3;
 	border:solid #ccc;
@@ -571,16 +533,13 @@ color: #464646;
 	-webkit-box-shadow: inset 0 1px 0 #fff;
 	box-shadow: inset 0 1px 0 #fff;
 }
-
 #of_save {
 	font-family: Arial,Verdana,sans-serif;
 	float:right;
 }
-
 #of_save:hover {
 	border:1px solid #111 !important;
 }
-
 #of_container .hide {
 	display:none
 }
@@ -595,16 +554,13 @@ color: #464646;
 	display: block;
 	margin-left: 100px;
 }
-
 #of_container .screenshot { 
 	max-width:340px;
 	margin-bottom:9px;
 }
-
 #of_container .of-uploaded-image {
 	
 }
-
 #of_container .of-option-image {
 	max-width:340px;
 	padding: 5px;
@@ -635,14 +591,11 @@ display: block;
 color: #888;
 position:relative;
 }
-
 #of_container .select_wrapper:hover {background-color:#f9f9f9;}
-
 #of_container .mini .controls select, #of_container #content .section .mini .controls, #of_container  .controls .typography-size, #of_container  .controls .border-width,#of_container  .controls .mini,#of_container .mini .controls input, #of_container #content .mini .controls {width: 70px;}
 #of_container  .controls .typography-face {width: 145px;}
 #of_container  .controls .typography-style, #of_container  .controls .border-style {width: 95px;}
 #of_container  .controls .typography-size,#of_container  .controls .typography-face,#of_container  .controls .typography-style, #of_container  .controls .border-width, #of_container  .controls .border-style {margin-right:5px;}
-
 #of_container #content .mini .explain {
 	width:500px;
 }
@@ -653,7 +606,6 @@ position:relative;
 	text-align: center;
 	margin-bottom: 15px
 }
-
 #of_container .slider li {
 	width: 345px;
 	border: 1px solid #dfdfdf;
@@ -666,7 +618,6 @@ position:relative;
 	-webkit-box-shadow: inset 0 1px 0 #fff;
 	box-shadow: inset 0 1px 0 #fff;
 }
-
 #of_container .slide_header {
 	cursor:move;
 	height:32px;
@@ -685,16 +636,13 @@ position:relative;
 	overflow:hidden;
 	position: relative;
 }
-
 #of_container .slide_body {
 	display:none;
 	padding:10px 10px 10px 11px;
 }
-
 #of_container .slider li input,#of_container .slider li input.upload,#of_container .slider li textarea,#of_container .slider li .screenshot,#of_container .slider li .of-option-image {
 	width:311px;
 }
-
 #of_container a.slide_edit_button, #of_container a.slide_delete_button {
 	text-indent:-9999px;
 	font-size:0;
@@ -717,7 +665,6 @@ position:relative;
 	height:16px;
 	background: url(../images/icon-delete.png) no-repeat
 }
-
 #of_container .select_wrapper span {
 height: 26px;
 line-height: 26px;
@@ -727,7 +674,6 @@ position:absolute;
 left:0;
 overflow: hidden;
 }
-
 #of_container .select_wrapper .select {
 cursor: pointer;
 height: 28px;
@@ -740,7 +686,6 @@ position: relative;
 width: inherit;
 z-index: 4;	
 }
-
 #of_backup {
 	margin: 40px 20px;
 	width: 600px;
@@ -755,7 +700,6 @@ z-index: 4;
 	font-size: 12px;
 	border-color: #CCC #E6E6E6 #E6E6E6 #CCC;
 }
-
 #of_container #content .section-backup .controls { width: 80%}
 #of_container #content .section-backup .explain {
     display:none
@@ -763,7 +707,6 @@ z-index: 4;
 #of_container #content .section-backup .backup-box {
     margin: 0 0 20px;
 }
-
 #of_container #content .section-backup .instructions {
     margin: 0 0 10px;
     color: #777;
@@ -771,7 +714,6 @@ z-index: 4;
 #of_container #content .section-backup .button, #of_container #content .section-transfer .button {
     margin: 0 25px 0 0;
 }
-
 /* google fonts previewer field style */
 #of_container p.google_font_preview{
 	display: block;
@@ -784,14 +726,11 @@ z-index: 4;
 	margin: 0 0 10px 0;
 	line-height: 1.2;
 }
-
 .temphide {display:none;}
 /*-------------------------------------------------------------------------------------------*/
 /* GENERAL STYLES */
 /*-------------------------------------------------------------------------------------------*/
-
 /* http://sonspring.com/journal/clearing-floats */
-
 html body * span.clear, html body * div.clear, html body * li.clear, html body * dd.clear {
 	background: none;
 	border: 0;
@@ -807,14 +746,11 @@ html body * span.clear, html body * div.clear, html body * li.clear, html body *
 	width: 0;
 	height: 0;
 }
-
-
 /*-------------------------------------------------------------------------------------------*/
 /* Tipsy
 /*-------------------------------------------------------------------------------------------*/
 .tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
   .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
-
   /* Rounded corners */
   .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
   
@@ -838,7 +774,6 @@ html body * span.clear, html body * div.clear, html body * li.clear, html body *
   .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
   .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
   
-
 /*-------------------------------------------------------------------------------------------*/
 /* Switch
 /*-------------------------------------------------------------------------------------------*/
@@ -861,8 +796,6 @@ p.switch-options{ margin: 0; }
 		-ms-user-select: none;
 		user-select: none;
 	}/*disable text selection*/
-
-
 /*-------------------------------------------------------------------------------------------*/
 /* Color picker overwrite
 /*-------------------------------------------------------------------------------------------*/
@@ -916,7 +849,6 @@ width: 225px;
 	height: auto;
 }
 #of_container .controls .wp-picker-container .wp-color-result { outline: 0; }
-
 /*-------------------------------------------------------------------------------------------*/
 /* Custom
 /*-------------------------------------------------------------------------------------------*/

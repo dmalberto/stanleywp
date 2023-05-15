@@ -8,7 +8,6 @@
 (function($) {
 	var pasteEventName = ($.browser.msie ? 'paste' : 'input') + ".mask";
 	var iPhone = (window.orientation != undefined);
-
 	$.mask = {
 		//Predefined character definitions
 		definitions: {
@@ -17,7 +16,6 @@
 			'*': "[A-Za-z0-9]"
 		}
 	};
-
 	$.fn.extend({
 		//Helper Function for Caret positioning
 		caret: function(begin, end) {
@@ -61,13 +59,11 @@
 				placeholder: "_",
 				completed: null
 			}, settings);
-
 			var defs = $.mask.definitions;
 			var tests = [];
 			var partialPosition = mask.length;
 			var firstNonMaskPos = null;
 			var len = mask.length;
-
 			$.each(mask.split(""), function(i, c) {
 				if (c == '?') {
 					len--;
@@ -80,20 +76,16 @@
 					tests.push(null);
 				}
 			});
-
 			return this.each(function() {
 				var input = $(this);
 				var buffer = $.map(mask.split(""), function(c, i) { if (c != '?') return defs[c] ? settings.placeholder : c });
 				var ignore = false;  			//Variable for ignoring control keys
 				var focusText = input.val();
-
 				input.data("buffer", buffer).data("tests", tests);
-
 				function seekNext(pos) {
 					while (++pos <= len && !tests[pos]);
 					return pos;
 				};
-
 				function shiftL(pos) {
 					while (!tests[pos] && --pos >= 0);
 					for (var i = pos; i < len; i++) {
@@ -109,7 +101,6 @@
 					writeBuffer();
 					input.caret(Math.max(firstNonMaskPos, pos));
 				};
-
 				function shiftR(pos) {
 					for (var i = pos, c = settings.placeholder; i < len; i++) {
 						if (tests[i]) {
@@ -123,16 +114,13 @@
 						}
 					}
 				};
-
 				function keydownEvent(e) {
 					var pos = $(this).caret();
 					var k = e.keyCode;
 					ignore = (k < 16 || (k > 16 && k < 32) || (k > 32 && k < 41));
-
 					//delete selection before proceeding
 					if ((pos.begin - pos.end) != 0 && (!ignore || k == 8 || k == 46))
 						clearBuffer(pos.begin, pos.end);
-
 					//backspace, delete, and escape get special treatment
 					if (k == 8 || k == 46 || (iPhone && k == 127)) {//backspace/delete
 						shiftL(pos.begin + (k == 46 ? 0 : -1));
@@ -143,7 +131,6 @@
 						return false;
 					}
 				};
-
 				function keypressEvent(e) {
 					if (ignore) {
 						ignore = false;
@@ -153,7 +140,6 @@
 					e = e || window.event;
 					var k = e.charCode || e.keyCode || e.which;
 					var pos = $(this).caret();
-
 					if (e.ctrlKey || e.altKey || e.metaKey) {//Ignore
 						return true;
 					} else if ((k >= 32 && k <= 125) || k > 186) {//typeable characters
@@ -173,16 +159,13 @@
 					}
 					return false;
 				};
-
 				function clearBuffer(start, end) {
 					for (var i = start; i < end && i < len; i++) {
 						if (tests[i])
 							buffer[i] = settings.placeholder;
 					}
 				};
-
 				function writeBuffer() { return input.val(buffer.join('')).val(); };
-
 				function checkVal(allow) {
 					//try to place characters where they belong
 					var test = input.val();
@@ -214,7 +197,6 @@
 					}
 					return (partialPosition ? i : firstNonMaskPos);
 				};
-
 				if (!input.attr("readonly"))
 					input
 					.one("unmask", function() {
@@ -244,7 +226,6 @@
 					.bind(pasteEventName, function() {
 						setTimeout(function() { input.caret(checkVal(true)); }, 0);
 					});
-
 				checkVal(); //Perform initial check for existing values
 			});
 		}

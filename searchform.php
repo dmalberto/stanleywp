@@ -13,10 +13,16 @@
  * @since          available since Release 1.0
  */
 ?>
-	<form method="get" class="form-inline" action="<?php echo home_url( '/' ); ?>">
+	<form method="get" class="form-inline" action="<?php echo home_url("/"); ?>">
 		<div class="form-group">
 		    <label class="sr-only" for="exampleInputEmail2">Email address</label>
-		    <input type="text" class="form-control search-query" name="s" id="search" placeholder="<?php esc_attr_e('search here &hellip;', 'gents'); ?>">
+		    <input type="text" class="form-control search-query" name="s" id="search" placeholder="<?php esc_attr_e(
+          "search here &hellip;",
+          "gents"
+      ); ?>">
 		  </div>
-		<button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="<?php esc_attr_e('Search', 'gents'); ?>">Search</button>
+		<button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="<?php esc_attr_e(
+      "Search",
+      "gents"
+  ); ?>">Search</button>
 	</form>

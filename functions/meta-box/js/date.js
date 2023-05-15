@@ -15,5 +15,4 @@ jQuery( document ).ready( function( $ )
 		$this.siblings( '.ui-datepicker-append' ).remove();         // Remove appended text
 		$this.removeClass( 'hasDatepicker' ).attr( 'id', '' ).datepicker( options );
 	}
-
 } );

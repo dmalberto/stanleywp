@@ -14,12 +14,10 @@
  */
 ?>
 <?php get_header(); ?>
-
 <div id="ww">
   <div class="container">
    <div class="row">
     <div class="col-lg-8 col-lg-offset-2 centered">
-
         <div id="content">
             <h6><?php _e('We found','gents'); ?> 
 			<?php
@@ -35,10 +33,7 @@
                 wp_reset_query();
             ?>
             </h6>
-
-
 <?php if (have_posts()) : ?>
-
 		<?php while (have_posts()) : the_post(); ?>
           
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -64,7 +59,6 @@
 					<?php comments_popup_link(__('No Comments <i class="icon-arrow-down"></i>', 'gents'), __('1 Comment <i class="icon-arrow-down"></i>', 'gents'), __('% Comments <i class="icon-arrow-down"></i>', 'gents')); ?>
                 </div><!-- end of .post-data --> 
                 </footer> 
-
                 <br>
                 <hr>           
             
@@ -80,9 +74,7 @@
             <div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'gents' ) ); ?></div>
 		</nav><!-- end of .navigation -->
         <?php endif; ?> 
-
 	    <?php else : ?>
-
        <article id="post-not-found" class="hentry clearfix">
         <header>
            <h1 class="title-404"><?php _e('404 &#8212; Fancy meeting you here!', 'gents'); ?></h1>
@@ -94,9 +86,7 @@
            <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
            <?php get_search_form(); ?>
        </footer>
-
    </article>
-
 <?php endif; ?>  
       
         </div><!-- end of #content -->
@@ -104,6 +94,4 @@
          </div><!-- /row -->
        </div> <!-- /container -->
      </div><!-- /ww -->
-
-
 <?php get_footer(); ?>

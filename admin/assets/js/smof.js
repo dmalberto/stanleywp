@@ -4,9 +4,7 @@
  * contains the core functionalities to be used
  * inside SMOF
  */
-
 jQuery.noConflict();
-
 /** Fire up jQuery - let's dance! 
  */
 jQuery(document).ready(function($){
@@ -16,7 +14,6 @@ jQuery(document).ready(function($){
     	var $fold='.f_'+this.id;
     	$($fold).slideToggle('normal', "swing");
   	});
-
   	//Color picker
   	$('.of-color').wpColorPicker();
 	
@@ -37,7 +34,6 @@ jQuery(document).ready(function($){
 	if (getURLParameter('tab') != "") {
 		$.cookie('of_current_opt', '#'+getURLParameter('tab'), { expires: 7, path: '/' });
 	}
-
 	// Display last current tab	
 	if ($.cookie("of_current_opt") === null) {
 		$('.group:first').fadeIn('fast');	
@@ -75,7 +71,6 @@ jQuery(document).ready(function($){
 		return false;
 						
 	});
-
 	//Expand Options 
 	var flip = 0;
 				
@@ -125,7 +120,6 @@ jQuery(document).ready(function($){
 		$('#of-popup-fail').center();
 	});
 			
-
 	//Masked Inputs (images as radio buttons)
 	$('.of-radio-img-img').click(function(){
 		$(this).parent().parent().find('.of-radio-img-img').removeClass('of-radio-img-selected');
@@ -143,7 +137,6 @@ jQuery(document).ready(function($){
 	$('.of-radio-tile-label').hide();
 	$('.of-radio-tile-img').show();
 	$('.of-radio-tile-radio').hide();
-
 	// Style Select
 	(function ($) {
 	styleSelect = {
@@ -169,7 +162,6 @@ jQuery(document).ready(function($){
 	
 	//Hide (Collapse) the toggle containers on load
 	$(".slide_body").hide(); 
-
 	//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
 	$(".slide_edit_button").live( 'click', function(){		
 		/*
@@ -434,7 +426,6 @@ jQuery(document).ready(function($){
 		
 		//get serialized data from all our option fields			
 		var serializedReturn = $('#of_form :input[name][name!="security"][name!="of_reset"]').serialize();
-
 		$('#of_form :input[type=checkbox]').each(function() {     
 		    if (!this.checked) {
 		        serializedReturn += '&'+this.name+'=0';
@@ -512,7 +503,6 @@ jQuery(document).ready(function($){
 					}, 2000);
 				}
 							
-
 			});
 			
 		}
@@ -520,8 +510,6 @@ jQuery(document).ready(function($){
 	return false;
 		
 	});
-
-
 	/**	Tipsy @since v1.3 */
 	if (jQuery().tipsy) {
 		$('.tooltip, .typography-size, .typography-height, .typography-face, .typography-style, .of-typography-color').tipsy({
@@ -560,8 +548,6 @@ jQuery(document).ready(function($){
 		});
 		
 	});
-
-
 	/**
 	  * Switch
 	  * Dependencies 	 : jquery
@@ -609,7 +595,6 @@ jQuery(document).ready(function($){
 		var _previewer = mainID +'_ggf_previewer';
 		
 		if( _selected ){ //if var exists and isset
-
 			$('.'+ _previewer ).fadeIn();
 			
 			//Check if selected is not equal with "Select a font" and execute the script.
@@ -650,8 +635,6 @@ jQuery(document).ready(function($){
 		var mainID = jQuery(this).attr('id');
 		GoogleFontSelect( this, mainID );
 	});
-
-
 	/**
 	  * Media Uploader
 	  * Dependencies 	 : jquery, wp media uploader
@@ -662,20 +645,16 @@ jQuery(document).ready(function($){
 	
 		var upload = $(".uploaded-file"), frame;
 		var $el = $(this);
-
 		event.preventDefault();
-
 		// If the media frame already exists, reopen it.
 		if ( frame ) {
 			frame.open();
 			return;
 		}
-
 		// Create the media frame.
 		frame = wp.media({
 			// Set the title of the modal.
 			title: $el.data('choose'),
-
 			// Customize the submit button.
 			button: {
 				// Set the text of the button.
@@ -685,7 +664,6 @@ jQuery(document).ready(function($){
 				close: false
 			}
 		});
-
 		// When an image is selected, run a callback.
 		frame.on( 'select', function() {
 			// Grab the selected attachment.
@@ -700,7 +678,6 @@ jQuery(document).ready(function($){
 			selector.find('.of-background-properties').slideDown();
 			optionsframework_file_bindings();
 		});
-
 		// Finally, open the modal.
 		frame.open();
 	}
@@ -730,8 +707,6 @@ jQuery(document).ready(function($){
     }
     
     optionsframework_file_bindings();
-
 	
 	
-
 }); //end doc ready

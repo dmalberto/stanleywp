@@ -1,6 +1,5 @@
 /* =Styles for 'normal' meta boxes
 -------------------------------------------------------------- */
-
 .rwmb-field {
 	margin: 10px 0;
 }
@@ -16,7 +15,6 @@
 	color: #c00;
 	font-weight: bold;
 }
-
 /* 75% if field has label, 100% if no label */
 .rwmb-input {
 	width: 100%;
@@ -30,7 +28,6 @@
 .rwmb-textarea {
 	resize: vertical;
 }
-
 /* Clone */
 .rwmb-clone {
 	min-height: 24px;
@@ -49,12 +46,10 @@
 	top: 0;
 	right: 0;
 }
-
 /* Fix empty block below admin footer (issue #24) */
 #ui-datepicker-div {
 	display: none;
 }
-
 /* jQuery validation */
 label.error {
 	padding-left: 3px;
@@ -66,11 +61,8 @@ select.error {
 	border: #c00 solid 1px !important;
 	background: #ffebe8 !important;
 }
-
-
 /* =Styles for 'side' meta boxes
 -------------------------------------------------------------- */
-
 #side-sortables .rwmb-label,
 #side-sortables .rwmb-input {
 	width: 100%;
